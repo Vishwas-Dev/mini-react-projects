@@ -1,0 +1,15 @@
+.wrapper{
+    border: 2px solid black;
+}
+
+.accordion{
+    background-color: aqua;
+}
+
+.item{
+    background-color: yellow;
+}
+
+.title{
+    background-color: green;
+}
