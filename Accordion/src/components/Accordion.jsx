@@ -34,7 +34,7 @@ function Accordion() {
 
                         </div>
                         ))}
-                    </div> : (<div> "No Data Here" </div>)
+                    </div> : (<div> "No Data Here.." </div>)
                 }
 
             </div>
