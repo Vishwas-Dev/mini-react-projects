@@ -11,7 +11,7 @@ function Accordion() {
     const [multiple, setMultiple] = useState([]);
 
     function handleSingleSelection(dataId) {
-        console.log(dataId);
+        // console.log(dataId);
         setSelected(dataId == selected ? null : dataId)
     };
 
@@ -30,7 +30,7 @@ function Accordion() {
     }
 
 
-    console.log(selected, multiple)
+    // console.log(selected, multiple)
 
     return (
         <div className='wrapper'>
