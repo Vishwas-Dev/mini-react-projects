@@ -1,0 +1,7 @@
+
+.btn-wrapper{
+    display: flex;
+    width: 282px;
+    margin: 0 auto;
+    gap: 20px;
+}
