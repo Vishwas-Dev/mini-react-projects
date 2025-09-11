@@ -5,40 +5,50 @@ import './RandomColorGenerator.css'
 
 function RandomColorGenerator() {
 
-  const [typeColor, setTypeColor] = useState("hex");
-  const [color, setColor] = useState('#000000');
+  const [typeColor, setTypeColor] = useState("hex"); // color comparing state
+  const [color, setColor] = useState('#000000'); // which color is store and default is black color
   // console.log( typeColor );
 
 
-  function randomColorHexGenerte(length) {
+  // generating color code or number for colors
+
+  function randomColorGenerting(length) {
     return Math.floor(Math.random() * length);
   }
+
+  // generating random color of hex
 
   function randomColorOfHex() {
     const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f"];
     let hexColor = '#';
 
     for (let i = 0; i < 6; i++) {
-      hexColor += hex[randomColorHexGenerte(hex.length)];
+      hexColor += hex[randomColorGenerting(hex.length)];
     }
 
     setColor(hexColor);
   };
 
-
+// generating random color of rgb
   function randomColorOfRgb() {
     console.log("rgb")
-    const r = randomColorHexGenerte(256);
-    const g = randomColorHexGenerte(256);
-    const b = randomColorHexGenerte(256);
+    const r = randomColorGenerting(256);
+    const g = randomColorGenerting(256);
+    const b = randomColorGenerting(256);
 
     setColor(`rgb(${r},${g},${b})`)
   };
 
 
-  function randomColorGenerator() {
+  // for reloading when switch btn hex to rgb or rgb t hex rendering
+  useEffect(() => {
+    if (typeColor == 'hex') {
+      return randomColorOfHex();
+    } else {
+      randomColorOfRgb();
+    }
+  }, [typeColor]);
 
-  }
 
 
   return (
