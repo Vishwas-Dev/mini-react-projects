@@ -5,12 +5,7 @@ import "./RandomColor.css"
 
 
 function RandomColor() {
-    const [typeOfColor, setTypeOfColor] = useState("hex");
-    const [color, setColor] = useState("#000000");
-
-    function randomColorUtility(length) {
-        return Math.floor(Math.random() * length);
-    }
+   
 
     function handleCreateRandomHexColor() {
         // #678765
