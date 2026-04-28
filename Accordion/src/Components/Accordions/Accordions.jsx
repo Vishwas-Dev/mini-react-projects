@@ -20,7 +20,7 @@ function Accordions() {
         if (findIndexOfCurrentId === -1) cpyMutiple.push(getCurrentId);
         else cpyMutiple.splice(findIndexOfCurrentId, 1);
 
-        setMultiple(cpyMutiple);
+       
     }
 
     console.log(selected, multiple);
